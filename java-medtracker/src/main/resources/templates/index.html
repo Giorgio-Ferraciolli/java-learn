@@ -43,8 +43,12 @@
                 <h5 class="card-title mb-1" th:text="${med.name}">Nome</h5>
                 <small class="text-muted" th:text="${med.characteristics}">Características</small>
             </div>
-            <div class="fs-4 fw-bold text-primary" th:text="${med.timeToTake}">
-                00:00
+            
+            <div class="d-flex align-items-center">
+                <div class="fs-4 fw-bold text-primary me-3" th:text="${med.timeToTake}">
+                    00:00
+                </div>
+                <a th:href="@{/delete/{id}(id=${med.id})}" class="btn btn-sm btn-outline-danger">Excluir</a>
             </div>
         </div>
     </div>
